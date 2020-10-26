@@ -20,6 +20,8 @@ const createParkingLot = async(lot) => {
 const park = async(registrationNumber, color) => {
     if(maxParkingSize === cars.length){
         return 'Sorry, parking lot is full';
+    }else if(maxParkingSize === 0){
+        return 'parking not initiated';
     }else {
         let ticketNumber = availableSlots[0];
         cars.push({
